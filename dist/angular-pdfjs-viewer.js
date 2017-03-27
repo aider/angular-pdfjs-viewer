@@ -373,7 +373,7 @@
 '\n' +
 '    </div> <!-- outerContainer -->\n' +
 '    <div id="printContainer"></div>\n' +
-'  </pdfjs-wrapper>,
+'  </pdfjs-wrapper>',
             restrict: 'E',
             scope: {
                 onInit: '&',
