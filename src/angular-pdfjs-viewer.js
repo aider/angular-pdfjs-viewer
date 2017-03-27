@@ -100,6 +100,10 @@
                 }
                 
                 var poller = $interval(function () {
+                    if(typeof(PDFViewerApplication) === 'undefined') {
+                        return;
+                    }
+
                     var pdfViewer = PDFViewerApplication.pdfViewer;
                     
                     if (pdfViewer) {
