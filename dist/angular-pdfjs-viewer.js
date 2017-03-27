@@ -373,7 +373,7 @@
 '\n' +
 '    </div> <!-- outerContainer -->\n' +
 '    <div id="printContainer"></div>\n' +
-'  </pdfjs-wrapper>',
+'  </pdfjs-wrapper>,
             restrict: 'E',
             scope: {
                 onInit: '&',
@@ -403,6 +403,10 @@
                 }
                 
                 var poller = $interval(function () {
+                    if(typeof(PDFViewerApplication) === 'undefined') {
+                        return;
+                    }
+
                     var pdfViewer = PDFViewerApplication.pdfViewer;
                     
                     if (pdfViewer) {
